@@ -10,22 +10,22 @@ public class Game {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long gameId;
     @ManyToOne
-    private Team homeTeam;
+    private String homeTeam;
     @ManyToOne 
-    private Team awayTeam;
+    private String awayTeam;
     private String location;
-    private LocalDateTime scheduledDate;
+    private LocalDate scheduledDate;
 
     // Getters
     public long getGameId() {
         return gameId;
     }
 
-    public Team getHomeTeam() {
+    public String getHomeTeam() {
         return homeTeam;
     }
 
-    public Team getAwayTeam() {
+    public String getAwayTeam() {
         return awayTeam;
     }
 
@@ -33,7 +33,7 @@ public class Game {
         return location;
     }
 
-    public LocalDateTime getScheduledDate() {
+    public LocalDate getScheduledDate() {
         return scheduledDate;
     }
 
@@ -42,11 +42,11 @@ public class Game {
         this.gameId = gameId;
     }
 
-    public void setHomeTeam(Team homeTeam) {
+    public void setHomeTeam(String homeTeam) {
         this.homeTeam = homeTeam;
     }
 
-    public void setAwayTeam(Team awayTeam) {
+    public void setAwayTeam(String awayTeam) {
         this.awayTeam = awayTeam;
     }
 
@@ -54,7 +54,7 @@ public class Game {
         this.location = location;
     }
 
-    public void setScheduledDate(LocalDateTime scheduledDate) {
+    public void setScheduledDate(LocalDate scheduledDate) {
         this.scheduledDate = scheduledDate;
     }
 }
