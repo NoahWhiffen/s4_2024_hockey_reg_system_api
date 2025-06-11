@@ -9,9 +9,7 @@ public class Game {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long gameId;
-    @ManyToOne
     private String homeTeam;
-    @ManyToOne 
     private String awayTeam;
     private String location;
     private LocalDate scheduledDate;
